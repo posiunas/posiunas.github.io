@@ -8,7 +8,8 @@
         <ul id="card-social">
         {{ range .Site.Params.links }}
             <li class="card-social-item">
-                <a href="{{ .url }}">{{ partial "fa-ico.html" .}}</a>
+                <a href="{{ .url }}" aria-label="Visit {{ .name }}">
+                    {{ partial "fa-ico.html" .}}</a>
             </li>
         {{ end }}
         </ul>

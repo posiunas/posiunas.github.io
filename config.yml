@@ -9,30 +9,30 @@ params:
     title: Justinas Pošiūnas
     subtitle: software development x personal business
     links:
-        - name: linkedin
+        - name: LinkedIn
           ico: fa-linkedin
           url: https://www.linkedin.com/in/posiunas/
 
-        - name: goodreads
+        - name: Goodreads
           ico: fa-goodreads
           url: https://www.goodreads.com/user/show/62544630-justinas
 
-        - name: instagram
+        - name: Instagram
           ico: fa-instagram
           url: https://instgram.com/nkwaerd
 
-        - name: github
+        - name: GitHub
           ico: fa-github
           url: https://github.com/posiunas
 
-        - name: spotify
+        - name: Spotify
           ico: fa-spotify
           url: https://open.spotify.com/user/1176777925
 
-        - name: twitter
+        - name: Twitter
           ico: fa-twitter
           url: https://twitter.com/nkwaerd
 
-        - name: messenger
+        - name: Messenger
           ico: fa-facebook-messenger
           url: https://m.me/nkwaerd
