@@ -65,3 +65,22 @@ body {
 .card-social-item a:hover {
     color: var(--raisin-black);
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--raisin-black);
+        color: var(--light-gray);
+    }
+
+    #card-subtitle {
+        color: var(--quick-silver);
+    }
+
+    .card-social-item a {
+        color: var(--quick-silver);
+    }
+    
+    .card-social-item a:hover {
+        color: var(--ghost-white);
+    }
+}
