@@ -29,7 +29,6 @@ body {
 }
 
 #card {
-    /* border: 1px solid var(--quick-silver); */
     margin: 0 auto;
     padding: 1rem;
     text-align: center;
@@ -40,7 +39,6 @@ body {
 }
 
 #card-title {
-    color: var(--raisin-black);
     font-size: 3.4rem;
     text-transform: uppercase;
 }
@@ -66,4 +64,23 @@ body {
 
 .card-social-item a:hover {
     color: var(--raisin-black);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--raisin-black);
+        color: var(--light-gray);
+    }
+
+    #card-subtitle {
+        color: var(--quick-silver);
+    }
+
+    .card-social-item a {
+        color: var(--quick-silver);
+    }
+    
+    .card-social-item a:hover {
+        color: var(--ghost-white);
+    }
 }
