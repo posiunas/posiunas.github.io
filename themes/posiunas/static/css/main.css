@@ -1,0 +1,69 @@
+:root {
+    --ghost-white: #e8e9f3;
+    --light-gray: #cecece;
+    --quick-silver: #a6a6a8;
+    --raisin-black: #272635;
+}
+
+html, body, h1, h2, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: var(--ghost-white);
+    color: var(--raisin-black);
+    font-family: 'Fira Mono', monospace;
+}
+
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#card {
+    /* border: 1px solid var(--quick-silver); */
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+#card-header {
+    padding-bottom: 1.8rem;
+}
+
+#card-title {
+    color: var(--raisin-black);
+    font-size: 3.4rem;
+    text-transform: uppercase;
+}
+
+#card-subtitle {
+    color: var(--quick-silver);
+    font-weight: 400;
+}
+
+#card-social {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.card-social-item {
+    font-size: 3.4rem;
+}
+
+.card-social-item a {
+    color: var(--quick-silver);
+}
+
+.card-social-item a:hover {
+    color: var(--raisin-black);
+}

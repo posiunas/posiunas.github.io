@@ -1,0 +1,38 @@
+baseURL: https://justinas.eu/
+languageCode: en-us
+title: Justinas Pošiūnas | software development x personal business
+theme: posiunas
+
+params:
+    meta:
+        description: My virtual personal presence starts there!
+    title: Justinas Pošiūnas
+    subtitle: software development x personal business
+    links:
+        - name: linkedin
+          ico: fa-linkedin
+          url: https://www.linkedin.com/in/posiunas/
+
+        - name: goodreads
+          ico: fa-goodreads
+          url: https://www.goodreads.com/user/show/62544630-justinas
+
+        - name: instagram
+          ico: fa-instagram
+          url: https://instgram.com/nkwaerd
+
+        - name: github
+          ico: fa-github
+          url: https://github.com/posiunas
+
+        - name: spotify
+          ico: fa-spotify
+          url: https://open.spotify.com/user/1176777925
+
+        - name: twitter
+          ico: fa-twitter
+          url: https://twitter.com/nkwaerd
+
+        - name: messenger
+          ico: fa-facebook-messenger
+          url: https://m.me/nkwaerd

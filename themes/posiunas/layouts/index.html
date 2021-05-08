@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <div id="card">
+        <div id="card-header">
+            <h1 id="card-title">{{ .Site.Params.title }}</h1>
+            <h2 id="card-subtitle">{{ .Site.Params.subtitle }}</h2>
+        </div>
+
+        <ul id="card-social">
+        {{ range .Site.Params.links }}
+            <li class="card-social-item">
+                <a href="{{ .url }}">{{ partial "fa-ico.html" .}}</a>
+            </li>
+        {{ end }}
+        </ul>
+    </div>
+{{ end }}
