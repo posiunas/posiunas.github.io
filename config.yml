@@ -7,7 +7,7 @@ params:
     meta:
         description: My virtual personal presence starts there!
     title: Justinas Pošiūnas
-    subtitle: software development x personal business
+    subtitle: software development personal business
     links:
         - name: LinkedIn
           ico: fa-linkedin
