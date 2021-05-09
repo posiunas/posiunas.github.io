@@ -11,7 +11,7 @@ draft: false
 * iPhone X 64 GB
 * LG 27UK850/BK85U
 * Sony WH-1000XM3
-* Airpods Pro
+* AirPods Pro
 * Magic Keyboard
 * Magic Mouse
 * Kindle Paperwhite 4
@@ -27,7 +27,7 @@ draft: false
 * macOS Big Sur
 * Bear
 * Docker
-* PHPStorm
+* PhpStorm
 * Visual Studio Code
 * TablePlus
 * iTerm
