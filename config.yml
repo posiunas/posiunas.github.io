@@ -1,13 +1,13 @@
 baseURL: https://justinas.eu/
 languageCode: en-us
-title: Justinas Pošiūnas | software development x personal business
+title: Justinas Pošiūnas | software development x engineering management
 theme: posiunas
 
 params:
     meta:
         description: My virtual personal presence starts there!
     title: Justinas Pošiūnas
-    subtitle: software development personal business
+    subtitle: software development & engineering management
     links:
         - name: LinkedIn
           ico: fa-linkedin
