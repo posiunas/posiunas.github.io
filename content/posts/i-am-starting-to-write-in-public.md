@@ -1,5 +1,5 @@
 ---
-title: "I Am Starting to Write in Public"
+title: "I am starting to write in public"
 date: 2025-10-09T00:01:14+03:00
 draft: false
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Full Stack Development"
+title: "Full Stack Web Development"
 date: 2025-10-09T00:08:55+03:00
 draft: false
 ---
