@@ -4,4 +4,4 @@ date: 2025-10-09T00:01:14+03:00
 draft: false
 ---
 
-It is time to refresh my skills of writing more than a single paragraph in social media or messenger.
+It is time to refresh my skills in writing more than a single paragraph on social media or in messengers.
