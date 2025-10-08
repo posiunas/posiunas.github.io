@@ -11,11 +11,11 @@ params:
     links:
         - name: LinkedIn
           ico: fa-linkedin
-          url: https://www.linkedin.com/in/posiunas/
+          url: https://www.linkedin.com/in/posiunas
 
         - name: Goodreads
           ico: fa-goodreads
-          url: https://www.goodreads.com/user/show/62544630-justinas
+          url: https://www.goodreads.com/posiunas
 
         - name: GitHub
           ico: fa-github
