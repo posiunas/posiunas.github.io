@@ -75,6 +75,97 @@ body {
     color: var(--raisin-black);
 }
 
+#posts {
+    margin-top: 3rem;
+    padding-top: 2rem;
+}
+
+#posts h3 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: var(--raisin-black);
+}
+
+#posts ul {
+    list-style: none;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#posts li {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+#posts a {
+    color: var(--raisin-black);
+    text-decoration: none;
+    font-weight: 500;
+    flex: 1;
+}
+
+#posts a:hover {
+    color: var(--quick-silver);
+}
+
+#posts .post-date {
+    color: var(--quick-silver);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.post {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.post-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.post-meta {
+    color: var(--quick-silver);
+    font-size: 0.9rem;
+}
+
+.post-content {
+    line-height: 1.6;
+    text-align: left;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.post-content p {
+    margin-bottom: 1rem;
+}
+
+.post-content a {
+    color: var(--raisin-black);
+    text-decoration: underline;
+}
+
+.post-content a:hover {
+    color: var(--quick-silver);
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background: var(--raisin-black);
@@ -90,6 +181,30 @@ body {
     }
     
     .card-social-item a:hover {
+        color: var(--ghost-white);
+    }
+
+    #posts {
+        border-top-color: var(--quick-silver);
+    }
+
+    #posts h3 {
+        color: var(--light-gray);
+    }
+
+    #posts a {
+        color: var(--light-gray);
+    }
+
+    #posts a:hover {
+        color: var(--ghost-white);
+    }
+
+    .post-content a {
+        color: var(--light-gray);
+    }
+
+    .post-content a:hover {
         color: var(--ghost-white);
     }
 }
