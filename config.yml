@@ -17,10 +17,6 @@ params:
           ico: fa-goodreads
           url: https://www.goodreads.com/user/show/62544630-justinas
 
-        - name: Instagram
-          ico: fa-instagram
-          url: https://instgram.com/nkwaerd
-
         - name: GitHub
           ico: fa-github
           url: https://github.com/posiunas
@@ -30,8 +26,8 @@ params:
           url: https://open.spotify.com/user/1176777925
 
         - name: Twitter
-          ico: fa-twitter
-          url: https://twitter.com/nkwaerd
+          ico: fa-x-twitter
+          url: https://x.com/nkwaerd
 
         - name: Messenger
           ico: fa-facebook-messenger
