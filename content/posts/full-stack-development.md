@@ -13,7 +13,7 @@ The casual flow was like this:
 1. Open Photoshop. Cracked one. Yikes.
 2. Design the website. Or open a .psd file that you received from another designer.
 4. Slice it and export the assets.
-5. Write HTML, CSS, and JavaScript.
+5. Write HTML, CSS, and jQuery. Yes, you see it right, I learned jQuery before JavaScript.
 6. Use the template however you want. Make a theme for WordPress or OpenCart, or integrate it into a web app using a framework like CodeIgniter.
 
 Later, I focused more on building HTTP APIs and other backend magic, and all these steps dropped out of my routine.
