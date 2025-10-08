@@ -25,6 +25,10 @@ Late one evening in January 2025, I realized two things:
 
 1. I want to build web apps again. Not only HTTP APIs for mobile apps.
 
-2. I had heard so much about Next.js but honestly had no idea how it worked. So within a few hours, I went through this course: https://nextjs.org/learn
+2. I had heard so much about Next.js but honestly had no idea how it worked.
+
+So within a few hours, I went through this course: https://nextjs.org/learn
+
+I liked the idea of using JavaScript for everything and avoiding the mental context-switching between JS and PHP. It felt like a recipe for ultimate productivity.
 
 **TO BE CONTINUED...**
