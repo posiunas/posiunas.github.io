@@ -3,6 +3,10 @@ languageCode: en-us
 title: Justinas Pošiūnas | software development x engineering management
 theme: posiunas
 
+caches:
+  images:
+    dir: :cacheDir/images
+
 params:
     meta:
         description: My virtual personal presence starts there!
@@ -25,7 +29,7 @@ params:
           ico: fa-spotify
           url: https://open.spotify.com/user/1176777925
 
-        - name: Twitter
+        - name: X
           ico: fa-x-twitter
           url: https://x.com/nkwaerd
 
