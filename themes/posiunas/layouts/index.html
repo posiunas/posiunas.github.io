@@ -1,29 +1,31 @@
 {{ define "main" }}
-    <div id="card">
-        <div id="card-header">
-            <h1 id="card-title">{{ .Site.Params.title }}</h1>
-            <h2 id="card-subtitle">{{ .Site.Params.subtitle }}</h2>
-        </div>
+    <div id="home">
+        <div id="card">
+            <div id="card-header">
+                <h1 id="card-title">{{ .Site.Params.title }}</h1>
+                <h2 id="card-subtitle">{{ .Site.Params.subtitle }}</h2>
+            </div>
 
-        <ul id="card-social">
-        {{ range .Site.Params.links }}
-            <li class="card-social-item">
-                <a href="{{ .url }}" aria-label="Visit {{ .name }}">
-                    {{ partial "fa-ico.html" .}}</a>
-            </li>
-        {{ end }}
-        </ul>
-
-        <div id="posts">
-            <h3>Recent Thoughts</h3>
-            <ul>
-            {{ range where .Site.RegularPages "Type" "posts" }}
-                <li>
-                    <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <ul id="card-social">
+            {{ range .Site.Params.links }}
+                <li class="card-social-item">
+                    <a href="{{ .url }}" aria-label="Visit {{ .name }}">
+                        {{ partial "fa-ico.html" .}}</a>
                 </li>
             {{ end }}
             </ul>
+
+            <div id="posts">
+                <h3>Recent Thoughts</h3>
+                <ul>
+                {{ range where .Site.RegularPages "Type" "posts" }}
+                    <li>
+                        <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </li>
+                {{ end }}
+                </ul>
+            </div>
         </div>
     </div>
 {{ end }}

@@ -5,6 +5,10 @@
     --raisin-black: #272635;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html, body, h1, h2, ul, li {
     margin: 0;
     padding: 0;
@@ -21,7 +25,11 @@ body {
     font-family: 'Fira Mono', monospace;
 }
 
-#content {
+a {
+    transition: color 0.2s ease;
+}
+
+#home {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,10 +190,6 @@ body {
     
     .card-social-item a:hover {
         color: var(--ghost-white);
-    }
-
-    #posts {
-        border-top-color: var(--quick-silver);
     }
 
     #posts h3 {
