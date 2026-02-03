@@ -1,20 +1,28 @@
 :root {
-    --ghost-white: #e8e9f3;
-    --light-gray: #cecece;
-    --quick-silver: #a6a6a8;
-    --raisin-black: #272635;
+    --ghost-white: #ffffff;
+    --light-gray: #e5e5e5;
+    --quick-silver: #666666;
+    --raisin-black: #2e2e2e;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-html, body, h1, h2, ul, li {
+html,
+body,
+h1,
+h2,
+ul,
+li {
     margin: 0;
     padding: 0;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
 }
@@ -22,7 +30,19 @@ html, body {
 body {
     background: var(--ghost-white);
     color: var(--raisin-black);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Fira Mono', monospace;
+    font-weight: 700;
 }
 
 a {
@@ -125,6 +145,8 @@ a {
     color: var(--quick-silver);
     font-size: 0.9rem;
     white-space: nowrap;
+    min-width: 140px;
+    display: inline-block;
 }
 
 .post {
@@ -168,10 +190,38 @@ a {
 .post-content a {
     color: var(--raisin-black);
     text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .post-content a:hover {
     color: var(--quick-silver);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--raisin-black);
+    color: var(--ghost-white) !important;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none !important;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.btn:hover {
+    color: var(--ghost-white) !important;
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--light-gray);
+    margin: 3rem auto;
+    width: 50%;
+    opacity: 0.5;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -187,7 +237,7 @@ a {
     .card-social-item a {
         color: var(--quick-silver);
     }
-    
+
     .card-social-item a:hover {
         color: var(--ghost-white);
     }
@@ -210,5 +260,15 @@ a {
 
     .post-content a:hover {
         color: var(--ghost-white);
+    }
+
+    .btn {
+        background: var(--ghost-white);
+        color: var(--raisin-black) !important;
+    }
+
+    .btn:hover {
+        color: var(--raisin-black) !important;
+        background: var(--light-gray);
     }
 }

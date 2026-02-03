@@ -7,6 +7,11 @@ caches:
   images:
     dir: :cacheDir/images
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 params:
     meta:
         description: My virtual personal presence starts there!
