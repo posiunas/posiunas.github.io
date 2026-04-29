@@ -60,28 +60,32 @@ a {
 #card {
     margin: 0 auto;
     text-align: center;
+    max-width: 680px;
+    width: 100%;
 }
 
 #card-header {
-    padding-bottom: 1.8rem;
+    padding-bottom: 1.2rem;
 }
 
 #avatar {
-    width: 120px;
-    height: 120px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.8rem;
 }
 
 #card-title {
-    font-size: 3.4rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
 }
 
 #card-subtitle {
     color: var(--quick-silver);
     font-weight: 400;
+    white-space: nowrap;
+    font-size: 0.95rem;
 }
 
 #card-social {
@@ -89,23 +93,28 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     list-style: none;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
-@media only screen and (min-width: 768px) {
-    #card-social {
-        width: 100%;
-    }
+.card-social-item {
+    font-size: 2.4rem;
+    padding: 0.5rem;
 }
 
-.card-social-item {
-    font-size: 3.4rem;
-    padding: 0.6rem;
+.custom-ico {
+    font-family: 'Fira Mono', monospace;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: -0.03em;
+    line-height: 1;
 }
 
 .card-social-item a {
     color: var(--quick-silver);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
 }
 
 .card-social-item a:hover {
@@ -113,14 +122,14 @@ a {
 }
 
 #posts {
-    margin-top: 3rem;
-    padding-top: 2rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
 }
 
 #posts h3 {
     font-size: 1.4rem;
     text-transform: uppercase;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--raisin-black);
 }
 
@@ -290,15 +299,31 @@ hr {
 
 @media only screen and (max-width: 768px) {
     #card-title {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
-    
+
+    #card-subtitle {
+        font-size: 0.8rem;
+    }
+
+    #card-header {
+        padding-bottom: 0.8rem;
+    }
+
+    #avatar {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 0.6rem;
+    }
+
     .card-social-item {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        padding: 0.25rem;
     }
 
     #posts {
-        margin-top: 2rem;
+        margin-top: 1.2rem;
+        padding-top: 1.2rem;
     }
 
     #posts li {

@@ -18,17 +18,25 @@ params:
     title: Justinas Pošiūnas
     subtitle: software development & engineering management
     links:
+        - name: Tyku8
+          custom_text: t8
+          url: https://tyku8.com
+
         - name: LinkedIn
           ico: fa-linkedin
           url: https://www.linkedin.com/in/posiunas
 
-        - name: Goodreads
-          ico: fa-goodreads
-          url: https://www.goodreads.com/posiunas
+        - name: WhatsApp
+          ico: fa-whatsapp
+          url: https://wa.me/37061011776
 
         - name: GitHub
           ico: fa-github
           url: https://github.com/posiunas
+
+        - name: Goodreads
+          ico: fa-goodreads
+          url: https://www.goodreads.com/posiunas
 
         - name: Spotify
           ico: fa-spotify
@@ -37,7 +45,3 @@ params:
         - name: X
           ico: fa-x-twitter
           url: https://x.com/nkwaerd
-
-        - name: Messenger
-          ico: fa-facebook-messenger
-          url: https://m.me/nkwaerd
