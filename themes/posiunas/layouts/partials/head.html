@@ -13,5 +13,6 @@
 
     <script src="https://kit.fontawesome.com/e7e364a36d.js" crossorigin="anonymous"></script>
 
-    <link href="/css/main.css" rel="stylesheet">
+    {{ $css := resources.Get "css/main.css" | fingerprint }}
+    <link href="{{ $css.RelPermalink }}" rel="stylesheet">
 </head>
