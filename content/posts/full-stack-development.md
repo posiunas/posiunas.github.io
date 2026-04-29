@@ -1,5 +1,5 @@
 ---
-title: "Full Stack Web Development"
+title: "Full Stack Web Development: Part I"
 date: 2025-10-09T00:08:55+03:00
 draft: false
 ---
@@ -34,6 +34,8 @@ Late one evening in January 2025, I realized two things:
 
 So within a few hours, I went through this course: https://nextjs.org/learn
 
-I liked the idea of using JavaScript for everything and avoiding the mental context-switching between JS and PHP. It felt like a recipe for ultimate productivity.
+I liked the idea of using JavaScript for everything and avoiding the mental context-switching between JS and PHP I have used to in the past. It felt like a recipe for ultimate productivity.
 
-**TO BE CONTINUED...**
+But honestly... It is not that straighforward and you have to adapt to some new concepts and ways of doing things. With Laravel you just create a new project, all the batteries are included and you can start building your app. With Next.js, you have to choose how to do things. Do you want to use a database? How do you want to connect to it? Do you want to use an ORM? Do you want to use serverless functions or set up a custom backend? Do you want to use TypeScript or stick with JavaScript? And so on. Yes, it provides a lot of flexibility, but it also means you have to make a lot of decisions and learn a lot of new things before you can even start building your app. It's not as simple as it seems at first glance.
+
+So maybe the price of switching between different languages in a full stack development environment is not that bad after all. That's the end of the first part about full stack web development for now.
