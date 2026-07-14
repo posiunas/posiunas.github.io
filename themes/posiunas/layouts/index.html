@@ -2,7 +2,12 @@
     <div id="home">
         <div id="card">
             <div id="card-header">
-                <div id="avatar"><img src="/avatar.png" alt="Justinas Pošiūnas"></div>
+                <div id="avatar">
+                    <picture>
+                        <source srcset="/avatar.webp" type="image/webp">
+                        <img src="/avatar.png" alt="Justinas Pošiūnas" width="288" height="288" fetchpriority="high">
+                    </picture>
+                </div>
                 <h1 id="card-title">{{ .Site.Params.title }}</h1>
                 <h2 id="card-subtitle">{{ .Site.Params.subtitle }}</h2>
             </div>
