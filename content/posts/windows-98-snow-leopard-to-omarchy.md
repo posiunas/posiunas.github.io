@@ -1,7 +1,7 @@
 ---
 title: "From Windows 98 and Mac OS X Snow Leopard to Omarchy"
 date: 2026-09-16T00:00:00+03:00
-draft: true
+draft: false
 ---
 
 Alright, the time has come to jump into this wide wide topic.
