@@ -1,6 +1,6 @@
 baseURL: https://justinas.eu/
 languageCode: en-us
-title: Justinas Pošiūnas | software development x engineering management
+title: Justinas Pošiūnas | software craftsmanship, curiosity and creativity
 theme: posiunas
 
 caches:
@@ -16,7 +16,7 @@ params:
     meta:
         description: My virtual personal presence starts there!
     title: Justinas Pošiūnas
-    subtitle: software development & engineering management
+    subtitle: software craftsmanship, curiosity and creativity
     links:
         - name: Tyku8
           custom_text: t8
