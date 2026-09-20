@@ -22,12 +22,16 @@
             </ul>
 
             <div id="posts">
-                <h3>Recent Thoughts</h3>
                 <ul>
                 {{ range where .Site.RegularPages "Type" "posts" }}
-                    <li>
-                        <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    <li{{ with .Params.hero }} class="has-thumb"{{ end }}>
+                        <div class="post-text">
+                            <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        </div>
+                        {{ with .Params.hero }}
+                        <img class="post-thumb" src="{{ . }}" alt="" loading="lazy">
+                        {{ end }}
                     </li>
                 {{ end }}
                 </ul>

@@ -2,6 +2,7 @@
 title: "Essential Engineering Management Books"
 date: 2026-02-03T23:30:00+02:00
 draft: false
+hero: /images/books-hero.webp
 ---
 
 Recently one of my friends asked for any recommendations on preparing for a transition to engineering management. Or at least getting more familiar with the role. I wrote down a list of my personal recommendations, and I thought I'd share it here also. Also I need to add that the more you read about particular topic, the more you start to notice that everything repeats and you stop learning entirely new things. That's why it's great to read one book, live through it for a while, then read another, catch the repetitions, and so on.

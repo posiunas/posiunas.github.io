@@ -2,6 +2,7 @@
 title: "A Supercar Release Rabbit Hole In August"
 date: 2026-08-17T00:00:00+03:00
 draft: false
+hero: /images/supercar-hero.webp
 ---
 
 It started with one YouTube video - a new supercar release. It was the evening of August 13, and it was the Koenigsegg CCGT1.

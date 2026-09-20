@@ -1,12 +1,19 @@
 {{ define "main" }}
     <article class="post">
+        <a href="/" class="mini-profile" aria-label="Home">
+            <span class="mini-avatar"><img src="/avatar.webp" alt="" width="64" height="64"></span>
+            <strong>{{ .Site.Params.title }}</strong>
+            <span>{{ .Site.Params.subtitle }}</span>
+        </a>
         <header class="post-header">
-            <a href="/" class="post-back">← All posts</a>
             <h1 class="post-title">{{ .Title }}</h1>
             <div class="post-meta">
                 <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
             </div>
         </header>
+        {{ with .Params.hero }}
+            <img class="post-hero" src="{{ . }}" alt="{{ $.Title }}">
+        {{ end }}
         <div class="post-content">
             {{ .Content }}
         </div>
