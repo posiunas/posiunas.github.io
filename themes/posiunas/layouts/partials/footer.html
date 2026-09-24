@@ -1,0 +1,15 @@
+{{- if not .IsHome }}
+<footer class="site-footer">
+    <nav aria-label="Site">
+        <a href="/">Home</a>
+        <a href="/posts/">All writing</a>
+        <a href="/uses/">Uses</a>
+        {{ with site.Home.OutputFormats.Get "rss" }}<a href="{{ .RelPermalink }}">RSS</a>{{ end }}
+    </nav>
+    <ul class="footer-social">
+    {{- range site.Params.links }}
+        <li><a href="{{ .url }}" aria-label="{{ .name }}" title="{{ .name }}">{{ partial "fa-ico.html" . }}</a></li>
+    {{- end }}
+    </ul>
+</footer>
+{{- end }}

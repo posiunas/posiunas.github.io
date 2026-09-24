@@ -2,6 +2,7 @@
 title: "Full Stack Web Development: Part I"
 date: 2025-10-09T00:08:55+03:00
 draft: false
+description: "What is full stack web development? It’s about the broadest range of capabilities a single developer can master."
 ---
 
 ## Introduction

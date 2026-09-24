@@ -1,0 +1,17 @@
+{{- /* Responsive image from a static/images path. Args: src, widths (slice), sizes, class, alt, loading, priority */ -}}
+{{- $alt := .alt | default "" -}}
+{{- with resources.Get (strings.TrimPrefix "/" .src) -}}
+  {{- $orig := . -}}
+  {{- $set := slice -}}
+  {{- $fallback := . -}}
+  {{- range $.widths -}}
+    {{- if le . $orig.Width -}}
+      {{- $r := $orig.Resize (printf "%dx webp q80" .) -}}
+      {{- $set = $set | append (printf "%s %dw" $r.RelPermalink $r.Width) -}}
+      {{- $fallback = $r -}}
+    {{- end -}}
+  {{- end -}}
+  <img{{ with $.class }} class="{{ . }}"{{ end }} src="{{ $fallback.RelPermalink }}"{{ with $set }} srcset="{{ delimit . ", " }}" sizes="{{ $.sizes }}"{{ end }} width="{{ $fallback.Width }}" height="{{ $fallback.Height }}" alt="{{ $alt }}"{{ if $.priority }} fetchpriority="high"{{ else }} loading="lazy"{{ end }} decoding="async">
+{{- else -}}
+  <img{{ with .class }} class="{{ . }}"{{ end }} src="{{ .src }}" alt="{{ $alt }}" loading="lazy">
+{{- end -}}

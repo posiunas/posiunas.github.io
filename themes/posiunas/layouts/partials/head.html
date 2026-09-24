@@ -1,16 +1,40 @@
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ .Site.Params.meta.description }}"/>
 
-    <title>{{ .Title }}</title>
+    {{- $title := cond .IsHome (printf "%s · %s" site.Params.title site.Params.subtitle) (printf "%s · %s" .Title site.Params.title) }}
+    {{- $desc := site.Params.meta.description }}
+    {{- if not .IsHome }}{{ with trim (partial "summary.html" .) " " }}{{ $desc = . }}{{ end }}{{ end }}
+    {{- $image := "avatar.png" | absURL }}
+    {{- $card := "summary" }}
+    {{- with .Params.hero }}{{ with resources.Get (strings.TrimPrefix "/" .) }}
+        {{- $image = (.Resize "1200x jpg q85 #ffffff").Permalink }}{{ $card = "summary_large_image" }}
+    {{- end }}{{ end }}
+
+    <title>{{ $title }}</title>
+    <meta name="description" content="{{ $desc }}">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#2e2e2e" media="(prefers-color-scheme: dark)">
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ with site.Home.OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Params.title }}">{{ end }}
+
+    <meta property="og:site_name" content="{{ site.Params.title }}">
+    <meta property="og:title" content="{{ cond .IsHome site.Params.title .Title }}">
+    <meta property="og:description" content="{{ $desc }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="{{ cond .IsPage "article" "website" }}">
+    <meta property="og:image" content="{{ $image }}">
+    {{- if .IsPage }}
+    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+    {{- end }}
+    <meta name="twitter:card" content="{{ $card }}">
+    <meta name="twitter:site" content="@nkwaerd">
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/e7e364a36d.js" crossorigin="anonymous" defer></script>
 

@@ -1,0 +1,4 @@
+{{- /* description front matter, else the first paragraph of the content */ -}}
+{{- $s := .Params.description -}}
+{{- if not $s -}}{{- with index (findRE `(?s)<p>.*?</p>` .Content 1) 0 -}}{{- $s = . | plainify | htmlUnescape -}}{{- end -}}{{- end -}}
+{{- $s | replaceRE `\s+` " " | strings.TrimSpace | truncate 160 -}}

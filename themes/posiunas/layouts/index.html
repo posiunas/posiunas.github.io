@@ -1,41 +1,49 @@
 {{ define "main" }}
     <div id="home">
         <div id="card">
-            <div id="card-header">
+            <header id="card-header">
                 <div id="avatar">
                     <picture>
                         <source srcset="/avatar.webp" type="image/webp">
-                        <img src="/avatar.png" alt="Justinas Pošiūnas" width="288" height="288" fetchpriority="high">
+                        <img src="/avatar.png" alt="Illustrated portrait of Justinas Pošiūnas" width="288" height="288" fetchpriority="high">
                     </picture>
                 </div>
-                <h1 id="card-title">{{ .Site.Params.title }}</h1>
-                <h2 id="card-subtitle">{{ .Site.Params.subtitle }}</h2>
-            </div>
+                <h1 id="card-title">{{ site.Params.title }}</h1>
+                <p id="card-subtitle">{{ site.Params.subtitle }}</p>
+                {{ with site.Params.bio }}<p id="card-bio">{{ . | markdownify }}</p>{{ end }}
+            </header>
 
-            <ul id="card-social">
-            {{ range .Site.Params.links }}
-                <li class="card-social-item">
-                    <a href="{{ .url }}" aria-label="Visit {{ .name }}">
-                        {{ partial "fa-ico.html" .}}</a>
-                </li>
-            {{ end }}
-            </ul>
-
-            <div id="posts">
-                <ul>
-                {{ range where .Site.RegularPages "Type" "posts" }}
-                    <li{{ with .Params.hero }} class="has-thumb"{{ end }}>
-                        <div class="post-text">
-                            <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
-                            <a href="{{ .Permalink }}">{{ .Title }}</a>
-                        </div>
-                        {{ with .Params.hero }}
-                        <img class="post-thumb" src="{{ . }}" alt="" loading="lazy">
-                        {{ end }}
-                    </li>
+            <nav id="card-links" aria-label="Elsewhere">
+                <ul class="links-primary">
+                {{ range where site.Params.links "primary" true }}
+                    <li><a href="{{ .url }}">{{ partial "fa-ico.html" . }}<span>{{ .name }}</span></a></li>
                 {{ end }}
                 </ul>
-            </div>
+                <ul class="links-secondary">
+                {{ range where site.Params.links "primary" "!=" true }}
+                    <li><a href="{{ .url }}" aria-label="{{ .name }}" title="{{ .name }}">{{ partial "fa-ico.html" . }}</a></li>
+                {{ end }}
+                    <li><a href="/uses/">Uses</a></li>
+                    {{ with site.Home.OutputFormats.Get "rss" }}<li><a href="{{ .RelPermalink }}">RSS</a></li>{{ end }}
+                </ul>
+            </nav>
+
+            <section id="writing" aria-label="Writing">
+                {{ $posts := where site.RegularPages "Type" "posts" }}
+                {{ $latest := index $posts 0 }}
+                {{ with $latest }}{{ if .Params.hero }}
+                <a class="featured" href="{{ .RelPermalink }}">
+                    {{ partial "img.html" (dict "src" .Params.hero "widths" (slice 680 1360) "sizes" "(max-width: 712px) calc(100vw - 2rem), 600px" "class" "featured-img") }}
+                    <span class="featured-title">{{ .Title }}</span>
+                    {{ with .Params.description }}<span class="featured-summary">{{ . }}</span>{{ end }}
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+                </a>
+                {{ $posts = after 1 $posts }}
+                {{ end }}{{ end }}
+
+                {{ partial "post-list.html" $posts }}
+                <a class="all-writing" href="/posts/">All writing</a>
+            </section>
         </div>
     </div>
 {{ end }}

@@ -1,0 +1,12 @@
+{{- /* Arg: page collection */ -}}
+<ul class="post-list">
+{{- range . }}
+    <li{{ with .Params.hero }} class="has-thumb"{{ end }}>
+        <div class="post-text">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        </div>
+        {{ with .Params.hero }}{{ partial "img.html" (dict "src" . "widths" (slice 240 480) "sizes" "(max-width: 768px) 120px, 240px" "class" "post-thumb") }}{{ end }}
+    </li>
+{{- end }}
+</ul>

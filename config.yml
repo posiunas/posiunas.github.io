@@ -1,11 +1,19 @@
 baseURL: https://justinas.eu/
 languageCode: en-us
-title: Justinas Pošiūnas | software craftsmanship, curiosity and creativity
+title: Justinas Pošiūnas
 theme: posiunas
 
 caches:
   images:
     dir: :cacheDir/images
+
+# expose static/images to Hugo Pipes so templates can resize heroes
+module:
+  mounts:
+    - source: static
+      target: static
+    - source: static/images
+      target: assets/images
 
 markup:
   goldmark:
@@ -14,25 +22,29 @@ markup:
 
 params:
     meta:
-        description: My virtual personal presence starts there!
+        description: Justinas Pošiūnas writes about engineering management, developer tools and the rabbit holes in between.
     title: Justinas Pošiūnas
     subtitle: software craftsmanship, curiosity and creativity
+    bio: "Building for the web since 2007. Now lead dev at [Kaching Appz](https://kachingappz.com), making [tyku8](https://tyku8.com) and writing about computers, software, engineering, tools and the rabbit holes in between."
     links:
-        - name: Tyku8
-          custom_text: t8
-          url: https://tyku8.com
-
         - name: LinkedIn
           ico: fa-linkedin
           url: https://www.linkedin.com/in/posiunas
-
-        - name: WhatsApp
-          ico: fa-whatsapp
-          url: https://wa.me/37061011776
+          primary: true
 
         - name: GitHub
           ico: fa-github
           url: https://github.com/posiunas
+          primary: true
+
+        - name: tyku8
+          custom_text: t8
+          url: https://tyku8.com
+          primary: true
+
+        - name: WhatsApp
+          ico: fa-whatsapp
+          url: https://wa.me/37061011776
 
         - name: Goodreads
           ico: fa-goodreads
@@ -45,3 +57,7 @@ params:
         - name: X
           ico: fa-x-twitter
           url: https://x.com/nkwaerd
+
+disableKinds:
+  - taxonomy
+  - term

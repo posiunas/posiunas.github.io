@@ -1,21 +1,36 @@
 {{ define "main" }}
     <article class="post">
-        <a href="/" class="mini-profile" aria-label="Home">
-            <span class="mini-avatar"><img src="/avatar.webp" alt="" width="64" height="64"></span>
-            <strong>{{ .Site.Params.title }}</strong>
-            <span>{{ .Site.Params.subtitle }}</span>
-        </a>
         <header class="post-header">
             <h1 class="post-title">{{ .Title }}</h1>
-            <div class="post-meta">
-                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-            </div>
+            {{ if eq .Type "posts" }}
+            <time class="post-meta" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            {{ else if .Params.lastmod }}
+            <time class="post-meta" datetime="{{ .Lastmod.Format "2006-01-02" }}">Updated {{ .Lastmod.Format "Jan 2006" }}</time>
+            {{ end }}
         </header>
         {{ with .Params.hero }}
-            <img class="post-hero" src="{{ . }}" alt="{{ $.Title }}">
+            {{ partial "img.html" (dict "src" . "widths" (slice 680 1360) "sizes" "(max-width: 712px) calc(100vw - 2rem), 616px" "class" "post-hero" "priority" true) }}
         {{ end }}
         <div class="post-content">
             {{ .Content }}
         </div>
+
+        {{ if eq .Type "posts" }}
+        {{ $others := where (where site.RegularPages "Type" "posts") "Permalink" "ne" .Permalink }}
+        {{ $next := .PrevInSection | default (index (first 1 $others) 0) }}
+        <aside class="post-end">
+            <div class="author">
+                <span class="mini-avatar"><img src="/avatar.webp" alt="" width="64" height="64" loading="lazy"></span>
+                <p><strong>{{ site.Params.title }}.</strong> {{ site.Params.bio | markdownify }}</p>
+            </div>
+            {{ with $next }}
+            <a class="next-read" href="{{ .RelPermalink }}">
+                {{ with .Params.hero }}{{ partial "img.html" (dict "src" . "widths" (slice 480 960) "sizes" "(max-width: 712px) calc(100vw - 2rem), 616px" "class" "next-read-img") }}{{ end }}
+                <span class="next-read-title"><span class="next-read-prefix">Next:</span> {{ .Title }}</span>
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            </a>
+            {{ end }}
+        </aside>
+        {{ end }}
     </article>
 {{ end }}

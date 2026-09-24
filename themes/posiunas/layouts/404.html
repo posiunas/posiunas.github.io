@@ -1,0 +1,11 @@
+{{ define "main" }}
+    <section class="post not-found">
+        <header class="post-header">
+            <h1 class="post-title">Page not found</h1>
+            <p class="post-meta">This page moved, or never existed. The writing is still here.</p>
+        </header>
+        <p><a class="btn" href="/">Back to the homepage</a></p>
+        <h2 class="archive-year">Latest writing</h2>
+        {{ partial "post-list.html" (first 3 (where site.RegularPages "Type" "posts")) }}
+    </section>
+{{ end }}
